@@ -10,7 +10,7 @@ export const useAuthStore = defineStore('auth', {
   actions: {
     async login(usuario, password) {
       try {
-        const res = await axios.post('https://agenda-contactos.infinityfreeapp.com/', {
+        const res = await axios.post('https://agenda-contactos.infinityfreeapp.com/api/auth/login.php', {
           nombre_de_usuario: usuario,
           password: password
         });
