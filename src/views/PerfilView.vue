@@ -11,7 +11,7 @@ const form = ref({ nombre_de_usuario: '', password: '' });
 
 const obtenerPerfil = async () => {
   try {
-    const response = await axios.get('https://agenda-contactos.infinityfreeapp.com/', {
+    const response = await axios.get('http://agenda-contactos.infinityfreeapp.com/', {
       headers: { Authorization: `Bearer ${authStore.token}` }
     });
     usuarioInfo.value = response.data;
