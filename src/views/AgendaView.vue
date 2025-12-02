@@ -32,7 +32,7 @@ const contactosFiltrados = computed(() => {
 const listarContactos = async () => {
   cargando.value = true;
   try {
-    const response = await axios.get('http://localhost/agenda-final/backend-api/api/contactos/index.php', {
+    const response = await axios.get('http://agenda-contactos.infinityfreeapp.com', {
       headers: { Authorization: `Bearer ${authStore.token}` }
     });
     contactos.value = response.data;
