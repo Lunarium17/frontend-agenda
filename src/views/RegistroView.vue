@@ -15,7 +15,7 @@ const handleRegistro = async () => {
     return;
   }
   try {
-    await axios.post('https://agenda-contactos.infinityfreeapp.com/api/auth/registro.php', {
+    await axios.post('http://localhost/backend-api/api/auth/registro.php', {
       nombre_de_usuario: usuario.value,
       password: password.value
     });
