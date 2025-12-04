@@ -11,7 +11,8 @@ const form = ref({ nombre_de_usuario: '', password: '' });
 
 const obtenerPerfil = async () => {
   try {
-    const response = await axios.get('http://localhost/backend-api/api/auth/perfil.php', {
+    // const response = await axios.get('http://localhost/agenda-final/backend-api/api/auth/perfil.php', {
+    const response = await axios.get('/api/auth/perfil.php', {
       headers: { Authorization: `Bearer ${authStore.token}` }
     });
     usuarioInfo.value = response.data;
@@ -21,7 +22,8 @@ const obtenerPerfil = async () => {
 
 const actualizarPerfil = async () => {
   try {
-    await axios.put('http://localhost/backend-api/api/auth/editar.php', form.value, {
+    // await axios.put('http://localhost/agenda-final/backend-api/api/auth/editar.php', form.value, {
+    await axios.put('/api/auth/editar.php', form.value, {
       headers: { Authorization: `Bearer ${authStore.token}` }
     });
     alert("Perfil actualizado. Inicia sesión de nuevo.");

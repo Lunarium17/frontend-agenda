@@ -6,7 +6,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/frontend-agenda/',
+  // base: '/frontend-agenda/'
+  base: '/',
   plugins: [
     vue(),
     vueDevTools(),
