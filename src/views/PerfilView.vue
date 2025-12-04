@@ -22,8 +22,8 @@ const obtenerPerfil = async () => {
 
 const actualizarPerfil = async () => {
   try {
-    // await axios.put('http://localhost/agenda-final/backend-api/api/auth/editar.php', form.value, {
-    await axios.put('/api/auth/editar.php', form.value, {
+    await axios.put('http://localhost/agenda-final/backend-api/api/auth/editar.php', form.value, {
+    // await axios.put('/api/auth/editar.php', form.value, {
       headers: { Authorization: `Bearer ${authStore.token}` }
     });
     alert("Perfil actualizado. Inicia sesión de nuevo.");

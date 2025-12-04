@@ -15,8 +15,8 @@ const handleRegistro = async () => {
     return;
   }
   try {
-    // await axios.post('http://localhost/agenda-final/backend-api/api/auth/registro.php', {
-    await axios.post('/api/auth/registro.php', {
+    await axios.post('http://localhost/agenda-final/backend-api/api/auth/registro.php', {
+    // await axios.post('/api/auth/registro.php', {
       nombre_de_usuario: usuario.value,
       password: password.value
     });
