@@ -10,8 +10,8 @@ export const useAuthStore = defineStore('auth', {
   actions: {
     async login(usuario, password) {
       try {
-        const res = await axios.post('http://localhost/agenda-final/backend-api/api/auth/login.php', {
-        // const res = await axios.post('/api/auth/login.php', {
+        // const res = await axios.post('http://localhost/agenda-final/backend-api/api/auth/login.php', {
+        const res = await axios.post('/api/auth/login.php', {
           nombre_de_usuario: usuario,
           password: password
         });
