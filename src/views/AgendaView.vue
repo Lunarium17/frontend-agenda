@@ -69,13 +69,13 @@ const procesarFormulario = async () => {
   try {
     if(idEditar.value) {
       // await axios.put(`http://localhost/agenda-final/backend-api/api/contactos/actualizar.php?id=${idEditar.value}`, form.value, {
-      await axios.put(`/api/contactos/actualizar.php?id=${idEditar.value}`, form.value, {
+      await axios.put(`https://agenda-contactos.infinityfreeapp.com/api/contactos/actualizar.php?id=${idEditar.value}`, form.value, {
         headers: { Authorization: `Bearer ${authStore.token}` }
       });
       alert("Contacto actualizado");
     } else {
       // await axios.post('http://localhost/agenda-final/backend-api/api/contactos/crear.php', form.value, {
-      await axios.post('/api/contactos/crear.php', form.value, {
+      await axios.post('https://agenda-contactos.infinityfreeapp.com/api/contactos/crear.php', form.value, {
         headers: { Authorization: `Bearer ${authStore.token}` }
       });
       alert("Contacto creado");
@@ -101,7 +101,7 @@ const eliminar = async (id) => {
   if(!confirm("¿Estás seguro de eliminar este contacto?")) return;
   try {
     // await axios.delete(`http://localhost/agenda-final/backend-api/api/contactos/eliminar.php?id=${id}`, {
-    await axios.delete(`/api/contactos/eliminar.php?id=${id}`, {
+    await axios.delete(`https://agenda-contactos.infinityfreeapp.com/api/contactos/eliminar.php?id=${id}`, {
       headers: { Authorization: `Bearer ${authStore.token}` }
     });
     await listarContactos();
