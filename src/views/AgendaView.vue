@@ -33,7 +33,7 @@ const listarContactos = async () => {
   cargando.value = true;
   try {
     // const response = await axios.get('http://localhost/agenda-final/backend-api/api/contactos/index.php', {
-    const response = await axios.get('/api/contactos/index.php', {
+    const response = await axios.get('https://agenda-contactos.infinityfreeapp.com/api/contactos/index.php', {
       headers: { Authorization: `Bearer ${authStore.token}` }
     });
     contactos.value = response.data;
