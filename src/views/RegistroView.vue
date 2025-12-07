@@ -16,7 +16,7 @@ const handleRegistro = async () => {
   }
   try {
     // await axios.post('http://localhost/agenda-final/backend-api/api/auth/registro.php', {
-    await axios.post('https://agenda-contactos.infinityfreeapp.com/api/auth/registro.php', {
+    await axios.post('https://bakend-agenda.onrender.com/api/auth/registro.php', {
       nombre_de_usuario: usuario.value,
       password: password.value
     });
